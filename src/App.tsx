@@ -124,7 +124,7 @@ function App() {
       title: 'Successful-Sites',
       description: 'It is a website template built using HTML, CSS on top of Bootstrap5 and Javascript.',
       tags: ['Javascript', 'HTML', 'CSS'],
-      link: '#',
+      link: 'https://lohithg21.github.io/Successful-Sites/',
       github: 'https://github.com/Lohithg21/Successful-Sites',
       gradient: 'from-orange-500 to-amber-500',
       image: proj3
