@@ -5,7 +5,6 @@ import proj1 from "./assets/HologramArcade.png";
 import proj2 from "./assets/StreamHub.png";
 import proj3 from "./assets/SuccessfulSites.png";
 import prof1 from "./assets/Profile_photo1.jpg";
-
 import { useState, useEffect } from 'react';
 import {
   Github,
@@ -24,7 +23,8 @@ import {
   Award,
   BookOpen,
   ImageIcon,
-  ChevronRight
+  ChevronRight,
+  Download
 } from 'lucide-react';
 
 function App() {
@@ -37,6 +37,8 @@ function App() {
     const saved = localStorage.getItem('darkMode');
     return saved ? JSON.parse(saved) : false;
   });
+
+  const resumeUrl = 'https://drive.google.com/file/d/1FAmqP7Zlgs1NKBw_Npi4Wi1brzil11uo/view?usp=drive_link';
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
@@ -84,6 +86,10 @@ function App() {
     }
   };
 
+  const handleDownloadCV = () => {
+    window.open(resumeUrl, '_blank');
+  };
+
   const skills = [
     {
       name: 'Programming:',
@@ -104,7 +110,7 @@ function App() {
 
   const projects = [
     {
-      title: 'Hologram Arcade',
+      title: 'Hologram Arena',
       description: 'An interactive project leveraging JavaScript, Three.js, HTML, and CSS to create a 3D environment with gesture-based controls. Implemented features such as drag, drop, zoom, and object manipulation using hand gestures, along with a custom Graphical User Interface (GUI) to enhance usability and user experience.',
       tags: ['Javascript', 'HTML', 'CSS'],
       link: '#',
@@ -292,11 +298,11 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in-up">
             <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-xl shadow-blue-500/30 animate-scale-in">
-               <img 
-                 src= {prof1}
-                 alt=" "
-                 className="w-full h-full rounded-full object-cover"
-                 />
+              <img
+                src={prof1}
+                alt=" "
+                className="w-full h-full rounded-full object-cover"
+              />
             </div>
             <h1 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up ${
               darkMode ? 'text-white' : 'text-slate-800'
@@ -329,6 +335,17 @@ function App() {
                 }`}
               >
                 Get In Touch
+              </button>
+              <button
+                onClick={handleDownloadCV}
+                className={`inline-flex items-center px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-medium border-2 transition-all duration-200 hover:shadow-lg hover:scale-105 ${
+                  darkMode
+                    ? 'bg-transparent text-cyan-400 border-cyan-400 hover:bg-cyan-400 hover:text-slate-900'
+                    : 'bg-white text-blue-600 border-blue-600 hover:bg-blue-600 hover:text-white'
+                }`}
+              >
+                <Download size={20} className="mr-2" />
+                Download CV
               </button>
             </div>
           </div>
