@@ -291,9 +291,11 @@ function App() {
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8 animate-fade-in-up">
             <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-xl shadow-blue-500/30 animate-scale-in">
-              <div className="w-full h-full rounded-full bg-white dark:bg-slate-800 flex items-center justify-center overflow-hidden">
-                <User size={80} className={darkMode ? 'text-cyan-400' : 'text-blue-600'} strokeWidth={1.5} />
-              </div>
+               <img 
+                 src="src\assets\Profile_photo1.jpg" 
+                 alt="Lohith K G"
+                 className="w-full h-full rounded-full object-cover"
+                 />
             </div>
             <h1 className={`text-4xl sm:text-5xl md:text-7xl font-bold mb-4 animate-fade-in-up ${
               darkMode ? 'text-white' : 'text-slate-800'
