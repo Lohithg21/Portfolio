@@ -4,6 +4,7 @@ import cert3 from "./assets/Web developer.jpg";
 import proj1 from "./assets/HologramArcade.png";
 import proj2 from "./assets/StreamHub.png";
 import proj3 from "./assets/SuccessfulSites.png";
+import prof1 from "./assets/Profile_photo1.jpg";
 
 import { useState, useEffect } from 'react';
 import {
@@ -292,8 +293,8 @@ function App() {
           <div className="mb-8 animate-fade-in-up">
             <div className="w-40 h-40 md:w-48 md:h-48 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 p-1 shadow-xl shadow-blue-500/30 animate-scale-in">
                <img 
-                 src="src\assets\Profile_photo1.jpg" 
-                 alt="Lohith K G"
+                 src= {prof1}
+                 alt=" "
                  className="w-full h-full rounded-full object-cover"
                  />
             </div>
