@@ -122,7 +122,7 @@ function App() {
       title: 'StreamHub',
       description: 'A full-stack language exchange platform that enables users to connect, chat, and learn languages together through real-time messaging, video calls, and interactive features — all wrapped in a beautiful, customizable interface.',
       tags: ['Javascript', 'React.js', 'Node.js','Express.js','MongoDB','Vite'],
-      link: '#',
+      link: 'https://streamhub-38hk.onrender.com',
       github: 'https://github.com/Lohithg21/StreamHub',
       gradient: 'from-emerald-500 to-teal-500',
       image: proj2
