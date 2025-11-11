@@ -4,6 +4,7 @@ import cert3 from "./assets/Web developer.jpg";
 import proj1 from "./assets/HologramArcade.png";
 import proj2 from "./assets/StreamHub.png";
 import proj3 from "./assets/SuccessfulSites.png";
+import proj4 from "./assets/Quickshow.png";
 import prof1 from "./assets/Profile_photo1.jpg";
 import { useState, useEffect } from 'react';
 import {
@@ -137,13 +138,13 @@ function App() {
       image: proj3
     },
     {
-      title: 'Weather Dashboard',
-      description: 'Real-time weather tracking application with interactive maps and forecasts.',
-      tags: ['React', 'APIs', 'Tailwind'],
+      title: 'Quickshow',
+      description: 'QuickShow is a dynamic movie booking platform that allows users to explore now-playing films, view detailed movie information, and book seats for upcoming shows, while administrators can easily manage movies, schedules, and bookings through an integrated dashboard.',
+      tags: ['React.js', 'Node.js', 'Express.js','Tailwind','MongoDB'],
       link: '#',
-      github: '#',
+      github: 'https://github.com/Lohithg21/Quickshow',
       gradient: 'from-pink-500 to-rose-500',
-      image: ''
+      image: proj4
     }
   ];
 
