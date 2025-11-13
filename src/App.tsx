@@ -141,7 +141,7 @@ function App() {
       title: 'Quickshow',
       description: 'QuickShow is a dynamic movie booking platform that allows users to explore now-playing films, view detailed movie information, and book seats for upcoming shows, while administrators can easily manage movies, schedules, and bookings through an integrated dashboard.',
       tags: ['React.js', 'Node.js', 'Express.js','Tailwind','MongoDB'],
-      link: '#',
+      link: 'https://quickshow-4psp.onrender.com',
       github: 'https://github.com/Lohithg21/Quickshow',
       gradient: 'from-pink-500 to-rose-500',
       image: proj4
