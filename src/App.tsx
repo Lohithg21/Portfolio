@@ -428,7 +428,7 @@ function App() {
                   }`}></div>
                   <div>
                     <p className="font-medium">Interests</p>
-                    <p className={darkMode ? 'text-slate-400' : 'text-slate-600'}>Web Development & Design</p>
+                    <p className={darkMode ? 'text-slate-400' : 'text-slate-600'}>Web Development</p>
                   </div>
                 </div>
               </div>
