@@ -39,7 +39,7 @@ function App() {
     return saved ? JSON.parse(saved) : false;
   });
 
-  const resumeUrl = 'https://drive.google.com/file/d/10b7PBhJw9F_NGCwH7WrxmFhN2qmmGMCj/view?usp=sharing';
+  const resumeUrl = 'https://drive.google.com/file/d/19d0y4E2-tz7igfcQrgm3CjOZ9124CjVr/view?usp=sharing';
 
   useEffect(() => {
     localStorage.setItem('darkMode', JSON.stringify(darkMode));
