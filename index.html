@@ -2,13 +2,786 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="src\assets\people.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio-Lohith</title>
-    <meta name="description" content="Portfolio of Lohith G — Software Developer skilled in MERN Stack, Java, and Web Development." />
+    <title>Portfolio - Lohith</title>
+    <meta
+      name="description"
+      content="Portfolio of Lohith G — Software Developer skilled in MERN Stack, Java, and Web Development."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="shortcut icon" href="assets/people.png" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <nav id="navbar">
+      <div class="nav-inner">
+        <div class="nav-logo">Lohith</div>
+        <div class="nav-links" id="navLinks">
+          <button class="nav-link active" onclick="scrollTo('home')">
+            Home
+          </button>
+          <button class="nav-link" onclick="scrollTo('about')">About</button>
+          <button class="nav-link" onclick="scrollTo('skills')">Skills</button>
+          <button class="nav-link" onclick="scrollTo('projects')">
+            Projects
+          </button>
+          <button class="nav-link" onclick="scrollTo('education')">
+            Education
+          </button>
+          <button class="nav-link" onclick="scrollTo('achievements')">
+            Achievements
+          </button>
+          <button class="nav-link" onclick="scrollTo('contact')">
+            Contact
+          </button>
+        </div>
+        <button
+          class="hamburger"
+          id="hamburger"
+          onclick="toggleMenu()"
+          aria-label="Menu"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="mob-close" onclick="toggleMenu()">
+        <svg viewBox="0 0 24 24">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+      <button
+        class="mob-link active"
+        onclick="
+          scrollTo('home');
+          toggleMenu();
+        "
+      >
+        Home
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('about');
+          toggleMenu();
+        "
+      >
+        About
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('skills');
+          toggleMenu();
+        "
+      >
+        Skills
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('projects');
+          toggleMenu();
+        "
+      >
+        Projects
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('education');
+          toggleMenu();
+        "
+      >
+        Education
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('achievements');
+          toggleMenu();
+        "
+      >
+        Achievements
+      </button>
+      <button
+        class="mob-link"
+        onclick="
+          scrollTo('contact');
+          toggleMenu();
+        "
+      >
+        Contact
+      </button>
+    </div>
+
+    <section id="home">
+      <div class="hero-inner fade-in visible">
+        <div class="hero-avatar-wrap">
+          <img src="assets/Profile_photo1.jpg" alt="Lohith K G" />
+        </div>
+        <h1 class="hero-h1">Hi, I'm <span>Lohith K G</span></h1>
+        <p class="hero-sub">
+          Engineering Student &amp; Aspiring Full Stack Developer
+        </p>
+        <p class="hero-desc">
+          Passionate about crafting modern web experiences with clean code and
+          creative design.
+        </p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="scrollTo('projects')">
+            View My Work
+          </button>
+          <button class="btn-outline" onclick="scrollTo('contact')">
+            Get In Touch
+          </button>
+          <a
+            href="https://drive.google.com/file/d/1RfzOKyT7cKWE4f6YNpmJ1I5_Ug2mgTkn/view?usp=sharing"
+            target="_blank"
+            class="btn-outline"
+          >
+            <svg viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download CV
+          </a>
+        </div>
+        <button class="chevron-down-btn" onclick="scrollTo('about')">
+          <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
+        </button>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+            <circle cx="12" cy="7" r="4" />
+          </svg>
+          <h2 class="sec-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-text slide-left">
+            <p>
+              I'm an engineering student with a passion for web development and
+              software engineering. I enjoy turning ideas into interactive,
+              user-friendly web applications.
+            </p>
+            <p>
+              Currently, I'm learning Java and MERN Stack development to
+              strengthen both my frontend and backend skills. I'm constantly
+              exploring new technologies and building projects to sharpen my
+              understanding of full-stack development.
+            </p>
+            <p>
+              My goal is to become a skilled software developer capable of
+              designing efficient, scalable, and elegant solutions.
+            </p>
+          </div>
+          <div class="about-card slide-right">
+            <h3>Quick Facts</h3>
+            <div class="fact-item">
+              <div class="fact-dot"></div>
+              <div>
+                <div class="fact-label">Education</div>
+                <div class="fact-val">B.E in AI &amp; ML</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-dot"></div>
+              <div>
+                <div class="fact-label">Focus Areas</div>
+                <div class="fact-val">Full Stack Development</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-dot"></div>
+              <div>
+                <div class="fact-label">Learning</div>
+                <div class="fact-val">Java &amp; MERN Stack</div>
+              </div>
+            </div>
+            <div class="fact-item">
+              <div class="fact-dot"></div>
+              <div>
+                <div class="fact-label">Interests</div>
+                <div class="fact-val">Web Development</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <polyline points="16 18 22 12 16 6" />
+            <polyline points="8 6 2 12 8 18" />
+          </svg>
+          <h2 class="sec-title">Skills &amp; Expertise</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-card fade-in">
+            <div class="skill-card-header">
+              <div class="skill-bar blue"></div>
+              <span class="skill-cat-name">Programming</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-dot blue"></div>
+                <span class="skill-name">Java</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot blue"></div>
+                <span class="skill-name">Python</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card fade-in">
+            <div class="skill-card-header">
+              <div class="skill-bar green"></div>
+              <span class="skill-cat-name">Web Development</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">HTML</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">CSS</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">JavaScript</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">React.js</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">Node.js</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot green"></div>
+                <span class="skill-name">Express.js</span>
+              </div>
+            </div>
+          </div>
+          <div class="skill-card fade-in">
+            <div class="skill-card-header">
+              <div class="skill-bar orange"></div>
+              <span class="skill-cat-name">Databases &amp; Tools</span>
+            </div>
+            <div class="skill-items">
+              <div class="skill-item">
+                <div class="skill-dot orange"></div>
+                <span class="skill-name">MongoDB</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot orange"></div>
+                <span class="skill-name">MySQL</span>
+              </div>
+              <div class="skill-item">
+                <div class="skill-dot orange"></div>
+                <span class="skill-name">Git</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <rect x="2" y="7" width="20" height="14" rx="2" />
+            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+          </svg>
+          <h2 class="sec-title">Featured Projects</h2>
+        </div>
+        <div class="projects-grid">
+          <div class="proj-card fade-in">
+            <div class="proj-img">
+              <img src="assets/HologramArcade.png" alt="Hologram Arena" />
+            </div>
+            <div class="proj-body">
+              <div class="proj-orb blue"></div>
+              <div class="proj-title">Hologram Arena</div>
+              <p class="proj-desc">
+                An interactive project leveraging JavaScript, Three.js, HTML,
+                and CSS to create a 3D environment with gesture-based controls.
+                Implemented features such as drag, drop, zoom, and object
+                manipulation using hand gestures, along with a custom Graphical
+                User Interface (GUI) to enhance usability and user experience.
+              </p>
+              <div class="proj-tags">
+                <span class="proj-tag">Javascript</span>
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+              </div>
+              <div class="proj-links">
+                <a
+                  href="https://github.com/Lohithg21/HologramArcade"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  GitHub
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card fade-in">
+            <div class="proj-img">
+              <img src="assets/StreamHub.png" alt="StreamHub" />
+            </div>
+            <div class="proj-body">
+              <div class="proj-orb green"></div>
+              <div class="proj-title">StreamHub</div>
+              <p class="proj-desc">
+                A full-stack language exchange platform that enables users to
+                connect, chat, and learn languages together through real-time
+                messaging, video calls, and interactive features — all wrapped
+                in a beautiful, customizable interface.
+              </p>
+              <div class="proj-tags">
+                <span class="proj-tag">Javascript</span>
+                <span class="proj-tag">React.js</span>
+                <span class="proj-tag">Node.js</span>
+                <span class="proj-tag">Express.js</span>
+                <span class="proj-tag">MongoDB</span>
+                <span class="proj-tag">Vite</span>
+              </div>
+              <div class="proj-links">
+                <a
+                  href="https://streamhub-38hk.onrender.com"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  View Project
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Lohithg21/StreamHub"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  GitHub
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card fade-in">
+            <div class="proj-img">
+              <img src="assets/SkyCast.png" alt="SkyCast" />
+            </div>
+            <div class="proj-body">
+              <div class="proj-orb orange"></div>
+              <div class="proj-title">SkyCast</div>
+              <p class="proj-desc">
+                A responsive weather web app built with HTML, CSS, and
+                JavaScript. It fetches real-time weather data from the
+                OpenWeatherMap API and displays current conditions including
+                temperature, humidity, wind speed, visibility for any city
+                worldwide.
+              </p>
+              <div class="proj-tags">
+                <span class="proj-tag">Javascript</span>
+                <span class="proj-tag">HTML</span>
+                <span class="proj-tag">CSS</span>
+              </div>
+              <div class="proj-links">
+                <a
+                  href="https://github.com/Lohithg21/SkyCast"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  View Project
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://lohithg21.github.io/SkyCast/"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  GitHub
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="proj-card fade-in">
+            <div class="proj-img">
+              <img src="assets/Quickshow.png" alt="Quickshow" />
+            </div>
+            <div class="proj-body">
+              <div class="proj-orb pink"></div>
+              <div class="proj-title">Quickshow</div>
+              <p class="proj-desc">
+                QuickShow is a dynamic movie booking platform that allows users
+                to explore now-playing films, view detailed movie information,
+                and book seats for upcoming shows, while administrators can
+                easily manage movies, schedules, and bookings through an
+                integrated dashboard.
+              </p>
+              <div class="proj-tags">
+                <span class="proj-tag">React.js</span>
+                <span class="proj-tag">Node.js</span>
+                <span class="proj-tag">Express.js</span>
+                <span class="proj-tag">Tailwind</span>
+                <span class="proj-tag">MongoDB</span>
+              </div>
+              <div class="proj-links">
+                <a
+                  href="https://quickshow-4psp.onrender.com"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  View Project
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"
+                    />
+                    <polyline points="15 3 21 3 21 9" />
+                    <line x1="10" y1="14" x2="21" y2="3" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/Lohithg21/Quickshow"
+                  target="_blank"
+                  class="proj-link"
+                >
+                  GitHub
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+            <path d="M6 12v5c3 3 9 3 12 0v-5" />
+          </svg>
+          <h2 class="sec-title">Education</h2>
+        </div>
+        <div class="edu-list">
+          <div class="edu-card slide-left">
+            <div class="edu-top">
+              <div>
+                <div class="edu-degree">
+                  B.E in Artificial Intelligence &amp; Machine Learning
+                </div>
+                <div class="edu-inst">
+                  P ES Institute of Technology and Management, Shivamogga
+                </div>
+              </div>
+              <div class="edu-period">2022 – 2026</div>
+            </div>
+            <p class="edu-desc">
+              Developed hands-on experience in Python, Java, and full-stack web
+              development through academic coursework and practical projects.
+            </p>
+          </div>
+          <div class="edu-card slide-left">
+            <div class="edu-top">
+              <div>
+                <div class="edu-degree">Pre-University (PUC)</div>
+                <div class="edu-inst">Amratha Bharathi PU College, Hebri</div>
+              </div>
+              <div class="edu-period">2019 – 2021</div>
+            </div>
+            <p class="edu-desc">
+              Studied the Science stream with a focus on Physics, Chemistry,
+              Mathematics and Biology, building a strong foundation in
+              analytical thinking and problem-solving.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="achievements">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+          <h2 class="sec-title">Certificates &amp; Achievements</h2>
+        </div>
+
+        <div class="sub-section-hdr fade-in">
+          <svg viewBox="0 0 24 24">
+            <circle cx="12" cy="8" r="6" />
+            <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+          </svg>
+          <h3>Achievements</h3>
+        </div>
+        <div class="ach-list">
+          <div class="ach-card fade-in">
+            <div class="ach-inner">
+              <div class="ach-bg-orb"></div>
+              <div class="ach-flex">
+                <div class="ach-icon-box">
+                  <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="8" r="6" />
+                    <path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11" />
+                  </svg>
+                </div>
+                <div style="flex: 1">
+                  <div class="ach-title">Secured Second Place in Hackathon</div>
+                  <div class="ach-event">
+                    Hack Yugma 2025 State Level Hackathon
+                  </div>
+                  <p class="ach-desc">
+                    Developed Hologram Arcade, an interactive project leveraging
+                    JavaScript, Three.js, HTML, and CSS to create a 3D
+                    environment with gesture-based controls. Implemented
+                    features such as drag, drop, zoom, and object manipulation
+                    using hand gestures, along with a custom Graphical User
+                    Interface to enhance usability and user experience.
+                  </p>
+                  <div class="pill-row">
+                    <span class="pill gray">2025</span>
+                    <button
+                      class="pill-btn"
+                      id="achBtn0"
+                      onclick="toggleExpand('achImg0', 'achBtn0')"
+                    >
+                      <svg viewBox="0 0 24 24">
+                        <rect x="3" y="3" width="18" height="18" rx="2" />
+                        <circle cx="8.5" cy="8.5" r="1.5" />
+                        <polyline points="21 15 16 10 5 21" />
+                      </svg>
+                      View Certificate
+                      <svg
+                        viewBox="0 0 24 24"
+                        style="width: 12px; height: 12px"
+                      >
+                        <polyline points="9 18 15 12 9 6" />
+                      </svg>
+                    </button>
+                  </div>
+                  <div class="cert-expand" id="achImg0">
+                    <div class="cert-img-wrap">
+                      <img
+                        src="assets/hackathon.png"
+                        alt="Hackathon Certificate"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sub-section-hdr fade-in">
+          <svg viewBox="0 0 24 24">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+          </svg>
+          <h3>Certifications</h3>
+        </div>
+        <div class="certs-grid">
+          <div class="cert-card fade-in">
+            <div class="cert-body">
+              <div class="cert-icon blue">
+                <svg viewBox="0 0 24 24">
+                  <polyline points="16 18 22 12 16 6" />
+                  <polyline points="8 6 2 12 8 18" />
+                </svg>
+              </div>
+              <div class="cert-title">Web Developer Bootcamp</div>
+              <div class="cert-issuer">Udemy</div>
+              <div class="cert-desc">
+                Comprehensive training in MERN stack development
+              </div>
+              <div class="pill-row">
+                <span class="pill gray">2024</span>
+                <button
+                  class="pill-btn"
+                  id="certBtn0"
+                  onclick="toggleExpand('certImg0', 'certBtn0')"
+                >
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  View
+                  <svg viewBox="0 0 24 24" style="width: 12px; height: 12px">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+              <div class="cert-expand" id="certImg0">
+                <div class="cert-img-wrap">
+                  <img
+                    src="assets/Web developer.jpg"
+                    alt="Web Developer Certificate"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cert-card fade-in">
+            <div class="cert-body">
+              <div class="cert-icon green">
+                <svg viewBox="0 0 24 24">
+                  <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                  <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+                </svg>
+              </div>
+              <div class="cert-title">Java</div>
+              <div class="cert-issuer">Udemy</div>
+              <div class="cert-desc">Java</div>
+              <div class="pill-row">
+                <span class="pill gray">2024</span>
+                <button
+                  class="pill-btn"
+                  id="certBtn1"
+                  onclick="toggleExpand('certImg1', 'certBtn1')"
+                >
+                  <svg viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="18" height="18" rx="2" />
+                    <circle cx="8.5" cy="8.5" r="1.5" />
+                    <polyline points="21 15 16 10 5 21" />
+                  </svg>
+                  View
+                  <svg viewBox="0 0 24 24" style="width: 12px; height: 12px">
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              </div>
+              <div class="cert-expand" id="certImg1">
+                <div class="cert-img-wrap">
+                  <img src="assets/DSA with Java.jpg" alt="DSA Certificate" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <div class="sec-title-row fade-in">
+          <svg viewBox="0 0 24 24">
+            <path
+              d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+            />
+            <polyline points="22,6 12,13 2,6" />
+          </svg>
+          <h2 class="sec-title">Get In Touch</h2>
+        </div>
+        <div class="contact-wrap">
+          <p class="contact-desc fade-in">
+            I'm always open to discussing new projects, creative ideas, or
+            opportunities to be part of your vision.
+          </p>
+          <div class="contact-social fade-in">
+            <a
+              href="https://www.linkedin.com/in/lohithg21/"
+              target="_blank"
+              class="social-icon"
+              title="LinkedIn"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
+                />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a
+              href="https://github.com/Lohithg21"
+              target="_blank"
+              class="social-icon"
+              title="GitHub"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"
+                />
+              </svg>
+            </a>
+            <a
+              href="mailto:lohithashwa944@gmail.com"
+              class="social-icon"
+              title="Email"
+            >
+              <svg viewBox="0 0 24 24">
+                <path
+                  d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+                />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2026 Lohith K G. Crafted with passion and code.</p>
+    </footer>
+    <script src="script.js"></script>
   </body>
 </html>
