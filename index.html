@@ -22,21 +22,25 @@
       <div class="nav-inner">
         <div class="nav-logo">Lohith</div>
         <div class="nav-links" id="navLinks">
-          <button class="nav-link active" onclick="scrollTo('home')">
+          <button class="nav-link active" onclick="scrollToSection('home')">
             Home
           </button>
-          <button class="nav-link" onclick="scrollTo('about')">About</button>
-          <button class="nav-link" onclick="scrollTo('skills')">Skills</button>
-          <button class="nav-link" onclick="scrollTo('projects')">
+          <button class="nav-link" onclick="scrollToSection('about')">
+            About
+          </button>
+          <button class="nav-link" onclick="scrollToSection('skills')">
+            Skills
+          </button>
+          <button class="nav-link" onclick="scrollToSection('projects')">
             Projects
           </button>
-          <button class="nav-link" onclick="scrollTo('education')">
+          <button class="nav-link" onclick="scrollToSection('education')">
             Education
           </button>
-          <button class="nav-link" onclick="scrollTo('achievements')">
+          <button class="nav-link" onclick="scrollToSection('achievements')">
             Achievements
           </button>
-          <button class="nav-link" onclick="scrollTo('contact')">
+          <button class="nav-link" onclick="scrollToSection('contact')">
             Contact
           </button>
         </div>
@@ -61,7 +65,7 @@
       <button
         class="mob-link active"
         onclick="
-          scrollTo('home');
+          scrollToSection('home');
           toggleMenu();
         "
       >
@@ -70,7 +74,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('about');
+          scrollToSection('about');
           toggleMenu();
         "
       >
@@ -79,7 +83,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('skills');
+          scrollToSection('skills');
           toggleMenu();
         "
       >
@@ -88,7 +92,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('projects');
+          scrollToSection('projects');
           toggleMenu();
         "
       >
@@ -97,7 +101,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('education');
+          scrollToSection('education');
           toggleMenu();
         "
       >
@@ -106,7 +110,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('achievements');
+          scrollToSection('achievements');
           toggleMenu();
         "
       >
@@ -115,7 +119,7 @@
       <button
         class="mob-link"
         onclick="
-          scrollTo('contact');
+          scrollToSection('contact');
           toggleMenu();
         "
       >
@@ -137,10 +141,10 @@
           creative design.
         </p>
         <div class="hero-btns">
-          <button class="btn-primary" onclick="scrollTo('projects')">
+          <button class="btn-primary" onclick="scrollToSection('projects')">
             View My Work
           </button>
-          <button class="btn-outline" onclick="scrollTo('contact')">
+          <button class="btn-outline" onclick="scrollToSection('contact')">
             Get In Touch
           </button>
           <a
@@ -156,7 +160,7 @@
             Download CV
           </a>
         </div>
-        <button class="chevron-down-btn" onclick="scrollTo('about')">
+        <button class="chevron-down-btn" onclick="scrollToSection('about')">
           <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9" /></svg>
         </button>
       </div>
@@ -201,15 +205,8 @@
             <div class="fact-item">
               <div class="fact-dot"></div>
               <div>
-                <div class="fact-label">Focus Areas</div>
-                <div class="fact-val">Full Stack Development</div>
-              </div>
-            </div>
-            <div class="fact-item">
-              <div class="fact-dot"></div>
-              <div>
                 <div class="fact-label">Learning</div>
-                <div class="fact-val">Java &amp; MERN Stack</div>
+                <div class="fact-val">MERN Stack</div>
               </div>
             </div>
             <div class="fact-item">
@@ -425,7 +422,7 @@
               </div>
               <div class="proj-links">
                 <a
-                  href="https://github.com/Lohithg21/SkyCast"
+                  href="https://lohithg21.github.io/SkyCast/"
                   target="_blank"
                   class="proj-link"
                 >
@@ -439,7 +436,7 @@
                   </svg>
                 </a>
                 <a
-                  href="https://lohithg21.github.io/SkyCast/"
+                  href="https://github.com/Lohithg21/SkyCast"
                   target="_blank"
                   class="proj-link"
                 >
@@ -652,7 +649,7 @@
                 Comprehensive training in MERN stack development
               </div>
               <div class="pill-row">
-                <span class="pill gray">2024</span>
+                <span class="pill gray">2025</span>
                 <button
                   class="pill-btn"
                   id="certBtn0"
@@ -691,7 +688,7 @@
               <div class="cert-issuer">Udemy</div>
               <div class="cert-desc">Java</div>
               <div class="pill-row">
-                <span class="pill gray">2024</span>
+                <span class="pill gray">2025</span>
                 <button
                   class="pill-btn"
                   id="certBtn1"
